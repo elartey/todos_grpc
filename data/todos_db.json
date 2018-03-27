@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1",
+    "name": "Shopping List",
+    "data": ["Meat", "Butter", "Eggs", "Ketchup"]
+  },{
+    "id": "2",
+    "name": "School List",
+    "data": ["Pencils", "Pens", "Paper Clips"]
+  },{
+    "id": "3",
+    "name": "Vacation List",
+    "data": ["Suitcase" ,"Tickets" ,"Bags"]
+  }
+]

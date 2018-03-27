@@ -1,0 +1,45 @@
+// todos protobuf definition
+
+syntax = "proto3";
+package todos;
+
+service Todos {
+    rpc CreateTodo (Todo) returns (TodoRequest) {}
+    rpc DeleteTodo (TodoRequest) returns (TodoStatus) {}
+    rpc UpdateTodo (TodoRequest) returns (TodoStatus) {}
+    rpc GetTodos (stream TodoRequest) returns (stream Todo) {}
+    rpc GetTodo (TodoRequest) returns (Todo) {}
+    rpc TestTodo (TestRequest) returns (TestResponse) {}
+}
+
+message TestRequest {
+    string name = 1;
+}
+
+message TestResponse {
+    string message = 1;
+}
+
+message Todo {
+    string id = 1;
+    string name = 2;
+    repeated string data = 3;
+}
+
+message TodoRequest {
+    string id = 1;
+}
+
+message TodoResponse {
+    bool status = 1;
+    Todo todo = 2;
+}
+
+message Response {
+    repeated Todo todo_resp = 1;
+}
+
+message TodoStatus {
+    bool status = 1;
+    string message = 2;
+}
